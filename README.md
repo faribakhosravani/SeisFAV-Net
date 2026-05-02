@@ -7,6 +7,9 @@
 
 The proposed denoising framework employs an integrated **Fourier Neural Operator Attention U-Net Variational Autoencoder** architecture designed to effectively suppress noise while preserving seismic signal characteristics. The model integrates spectral learning, hierarchical convolutional feature extraction, and probabilistic latent representation within a unified end-to-end framework.
 
+<img width="2520" height="1263" alt="image" src="https://github.com/user-attachments/assets/a72d68f4-cbae-4f25-8262-1747bb8f940d" />
+(a) Clean test data (b) Noisy test data (c) MSSA-Net (d) MCA SCUNet (e) DDAE (f) BM3D (g) ADDC-Net (h) SeisFAV-Net.
+
 ## Input Specification
 
 The input to the network is a normalized one-dimensional seismic trace $x \in \mathbb{R}^{1 \times N}$, where $N$ denotes the number of temporal samples. Prior to training, all traces are standardized using the global mean and standard deviation of the dataset to stabilize optimization and accelerate convergence.
@@ -24,6 +27,9 @@ The decoder incorporates **self-attention modules** and **skip connections** to 
 ## Overview
 
 SeisFAV-Net is a deep learning framework that integrates **Fourier Neural Operators (FNO)**, **Attention-augmented U-Net**, and **Variational Autoencoders (VAE)** for effective seismic noise suppression while preserving critical signal characteristics. The architecture combines spectral learning, hierarchical feature extraction, and probabilistic latent representation in a unified end-to-end trainable model.
+
+<img width="2498" height="1227" alt="Screenshot from 2026-05-02 15-26-26" src="https://github.com/user-attachments/assets/748e359c-8b22-45fb-b02d-da6b0bf5ebde" />
+𝑓-𝑘 spectral analysis (a) Clean test data (b) Noisy test data (c) MSSA-Net (d) MCA SCUNet (e) DDAE (f) BM3D (g) ADDC-Net (h) SeisFAV-Net.
 
 ### Key Features
 
@@ -65,6 +71,10 @@ The framework reports standard seismic denoising metrics:
 - **Structural Similarity Index (SSIM)**
 - **Mean Absolute Error (MAE)**
 
+<img width="2438" height="1338" alt="image" src="https://github.com/user-attachments/assets/e248afdf-f371-4623-ba1b-17a7d6606815" />
+Time-domain analysis (trace No.475) (a) Clean test data (b) Noisy test data (c) MSSA-Net (d) MCA SCUNet (e) DDAE (f) BM3D (g) ADDC-Net (h) SeisFAV-Net.
+
+
 ## Comparison with Prior Work
 
 | Aspect | Others | SeisFAV-Net (Ours) |
@@ -74,6 +84,9 @@ The framework reports standard seismic denoising metrics:
 | **Learning Strategy** | Direct reconstruction | Residual noise prediction |
 | **Code Availability** | ❌ Not released | ✅ Open source |
 | **Reproducibility** | Limited architectural details | Full implementation + configs |
+
+<img width="2528" height="1099" alt="image" src="https://github.com/user-attachments/assets/72d2775b-bf85-40b9-84e2-035941272b2a" />
+frequency-amplitude spectrum analysis (trace No.475) (a) Clean test data (b) Noisy test data (c) MSSA-Net (d) MCA SCUNet (e) DDAE (f) BM3D (g) ADDC-Net (h) SeisFAVNet.
 
 ---
 
